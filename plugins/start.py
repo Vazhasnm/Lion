@@ -16,7 +16,13 @@ from helper_func import subscribed, encode, decode, get_messages
 from database.database import add_user, del_user, full_userbase, present_user
 
 
-
+ST = [ 
+"CAACAgUAAxkBAALnTWIMjpE0lZhGHiNtoecwrVIKf93pAALZBAACIPNhVKv-3WsSsZUYHgQ",
+"CAACAgUAAxkBAALnTmIMjo1B0Ir58cFH9zSkK1nz8qDrAALaBAACIPNhVH40vQm0WXfvHgQ",
+"CAACAgUAAxkBAALnSmIMjnKhmhVXDMG--VL-zX0V31xnAALYBAACIPNhVOuZgAcTjwqDHgQ",
+"CAACAgUAAxkBAALnR2IMjmSbudn-QzJjc8PVVi8ttAbcAALXBAACIPNhVEeBDLUAAZoE8x4E",
+"CAACAgUAAxkBAALnRGIMjjPQiscjXb8KD0WTDwdnXYb6AALVBAACIPNhVIDlVV3Z4DHaHgQ",
+]
 
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
 async def start_command(client: Client, message: Message):
@@ -88,11 +94,13 @@ async def start_command(client: Client, message: Message):
         reply_markup = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("😊 About Me", callback_data = "about"),
-                    InlineKeyboardButton("🔒 Close", callback_data = "close")
+                    InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data = "about"),
+                    InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data = "close")
                 ]
             ]
         )
+        await message.reply_sticker(
+            sticker = random.choice(ST))
         await message.reply_text(
             text = START_MSG.format(
                 first = message.from_user.first_name,
