@@ -17,11 +17,11 @@ from database.database import add_user, del_user, full_userbase, present_user
 
 
 ST = [ 
-"CAACAgUAAxkBAALnTWIMjpE0lZhGHiNtoecwrVIKf93pAALZBAACIPNhVKv-3WsSsZUYHgQ",
-"CAACAgUAAxkBAALnTmIMjo1B0Ir58cFH9zSkK1nz8qDrAALaBAACIPNhVH40vQm0WXfvHgQ",
-"CAACAgUAAxkBAALnSmIMjnKhmhVXDMG--VL-zX0V31xnAALYBAACIPNhVOuZgAcTjwqDHgQ",
-"CAACAgUAAxkBAALnR2IMjmSbudn-QzJjc8PVVi8ttAbcAALXBAACIPNhVEeBDLUAAZoE8x4E",
-"CAACAgUAAxkBAALnRGIMjjPQiscjXb8KD0WTDwdnXYb6AALVBAACIPNhVIDlVV3Z4DHaHgQ",
+"CAACAgUAAx0CZRja8gACCf9kIUhCpyEP5hIzxyiOGPlkAUNmYwACagQAApE6SFVZHg7_Bxquwx4E",
+"CAACAgUAAx0CZRja8gACCgABZCFIQ6sLEzSuLbtEs36wm1nctg8AAjMFAALjJwlVDNnEu2joygweBA",
+"CAACAgUAAx0CZRja8gACCgFkIUhNP0irOfgq3sBv_XMCoyhzkgACewQAAlF78VW1H9_SufO1Ah4E",
+"CAACAgUAAx0CZRja8gACCgJkIUhQYfjNBn2lhAyqEMqeWxOaDgACiwQAAsjSCFaD-NMqA_p7mh4E",
+"CAACAgUAAx0CZRja8gACChNkIUi_M8g5vzr41JyJjWCvHymrbwACLAcAAsJb8FUtuyxSPQPMix4E",
 ]
 
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
